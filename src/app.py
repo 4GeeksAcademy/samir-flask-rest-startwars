@@ -36,6 +36,8 @@ def handle_invalid_usage(error):
 def sitemap():
     return generate_sitemap(app)
 
+# usurios
+
 @app.route('/user/<int:user_id>', methods=['GET'])
 def get_user(user_id):
     user=User.query.filter_by(id=user_id).first()

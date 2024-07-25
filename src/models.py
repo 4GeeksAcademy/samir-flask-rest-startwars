@@ -11,8 +11,6 @@ class User(db.Model):
     password = db.Column(db.String(80), unique=False)
     is_active = db.Column(db.Boolean(), unique=False)
 
-    
-
     def __repr__(self):
         return '<User %r>' % self.first_name
 
@@ -99,5 +97,5 @@ class Favorite_Character(db.Model):
         return {
             "id": self.id,
             "user": self.user.first_name,
-            "planet": self.character.first_name
+            "character": self.character.first_name
         }
